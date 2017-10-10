@@ -8,21 +8,7 @@ void reconnect() {
     if (client.connect(clientid)) {
       Serial.println("connected");
       // Once connected, publish an announcement...
-      StaticJsonBuffer<200> sendHomeJsonBuffer;
-JsonObject& sendHomeRoot = sendHomeJsonBuffer.createObject();
-sendHomeRoot["robotID"] = clientid;
-//Republish ClientID and IP address (probably need a timer here)
-//client.publish("robothome", clientid); //publish robot name (This is the topic the robot publishes too)
-
-//Convert IP Address to char array
-  String ipaddress = WiFi.localIP().toString();
-  char ipchar[ipaddress.length()+1];
-  ipaddress.toCharArray(ipchar,ipaddress.length()+1);
- sendHomeRoot["IP"] = ipchar; 
-//client.publish("robothome", ipchar); //This is the Robot IP address used for UDP control
-char tempArr1[200];
-sendHomeRoot.printTo(tempArr1);
-client.publish("robothome", tempArr1);
+     publishTopicHome();
     } else {
       Udp.flush();
       Serial.print("failed, rc=");
@@ -32,6 +18,7 @@ client.publish("robothome", tempArr1);
       Serial.print("Error All Motors Stop....");
       yield();
       stop(); //Stop motors....we lost at least one connection to the network.
+      cmd();
       delay(5000); //....robot maybe in trouble.
     }
   }

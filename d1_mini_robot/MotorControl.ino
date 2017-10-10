@@ -61,6 +61,7 @@ void encoderReset() {
   m2dir = 0;
   m1steps = 0;
   m2steps = 0;
+  cmd = 0;
 }
 
 void update() {

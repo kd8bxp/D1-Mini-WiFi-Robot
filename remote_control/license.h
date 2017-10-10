@@ -16,16 +16,5 @@ This program is free software: you can redistribute it and/or modify
     along with this program.  If not, see <http://www.gnu.org/licenses>
 
 Change Log:
-
-Oct 7 - Fixed UDP Flooding Issue
-        UDP Remote Working.
-        Cleaned up and made some comments in code.
-        
-ToDo: Last Updated Oct 4, 2017
-
-Add protection code from the ultrasonic (so it doesn't run into things)
-Add Wifi Manager
-
-* Create a Raspberry PI to run a personal MQTT Broker.
-
+ 
 */

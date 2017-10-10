@@ -1,4 +1,4 @@
-//v3.0a
+//v3.0.1 
 
 #include "WEMOS_Motor.h"
 #include <ESP8266WiFi.h>
@@ -18,7 +18,8 @@ Ultrasonic ultrasonic(D0); //Using D0 on the D1 Mini Board
 int lowSpeed = 60;
 int maxSpeed = 100;
 
-//Setup Encoder Pins
+//Setup Encoder Pins 
+//It appears the interrupt handler needs the GPIO numbers
 const int M1A = 13;
 const int M1B = 12;
 const int M2A = 14;
@@ -29,7 +30,7 @@ volatile int m1dir = 0;
 volatile int m2dir = 0;
 long m1steps, m2steps;
 
-//setup counters
+//setup counters (Did I use m1count and m2count anywhere, or are the counters using m1steps, m2steps (?)
 volatile unsigned long m1count, m2count;
 
 int isRunning  = 0; //Motor Running flag.
@@ -48,11 +49,11 @@ int targetCount = 0;
 int targetCountM1 = 0;
 int targetCountM2 = 0;
 
-unsigned int localPort = 8888;      // local port to listen on
+unsigned int localPort = 8888;      // local UDP port to listen on
 
 // buffers for receiving and sending data
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE]; //buffer to hold incoming packet,
-char ReplyBuffer[] = "ack";  // a string to send back
+char ReplyBuffer[] = "ack";  // a string to send back (I think this is a hold over from the library example and not used here)
 
 const char* ssid = "Motel6";
 const char* password = "";
@@ -63,15 +64,12 @@ long lastMsg = 0;
 char msg[50];
 int value = 0;
  
-    uint32_t chipid=ESP.getChipId(); 
-    char clientid[16];
+    uint32_t chipid=ESP.getChipId(); //attempt to make a unique ID for MQTT Broker 
+    char clientid[16]; //unique ID for MQTT Broker - also used as the Publish Topic
 
 long RangeInInches;
 
-int mode = 0;
+int mode = 0; //Default mode is UDP remote control
 int cmd = 0; //stop command
-
-unsigned long udpTimer = 0;
-unsigned long udpCurrentTimer = 0;
 
 
