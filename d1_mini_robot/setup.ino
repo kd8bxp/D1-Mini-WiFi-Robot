@@ -6,7 +6,9 @@ void setup() {
   pinMode(M2B, INPUT_PULLUP);
   attachInterrupt(M1A, m1achange, RISING);
   attachInterrupt(M2A, m2achange, RISING);
-  setup_wifi();   
+ // setup_wifi();
+  WiFiManager wifiManager;
+  wifiManager.autoConnect();  
   Udp.begin(localPort);
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);

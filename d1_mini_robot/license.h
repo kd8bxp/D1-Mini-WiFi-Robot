@@ -23,6 +23,7 @@ Oct 10 - Fixed UDP Flooding Issue
         Added more stops to reconnect function (v3.0.2) made it safer.
         fixed date in Change Log. (Oct 7 to Oct 10)
         * Special Note: Do not hold the toggle switch on the remote it will FLOOD and isn't needed.
+Oct 11 - Added WifiManager
         
 ToDo: Last Updated Oct 4, 2017
 

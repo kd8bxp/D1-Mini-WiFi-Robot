@@ -16,5 +16,6 @@ This program is free software: you can redistribute it and/or modify
     along with this program.  If not, see <http://www.gnu.org/licenses>
 
 Change Log:
- 
+
+Oct 11 - v3.0.1 Added WiFiManager 
 */

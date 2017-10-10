@@ -6,6 +6,9 @@
 #include <PubSubClient.h>
 #include "Ultrasonic.h"
 #include <ArduinoJson.h>
+#include <DNSServer.h>
+#include <ESP8266WebServer.h>
+#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
 
 
 Motor M1(0x30, _MOTOR_A, 1000); //Connected to A1 & A2 Right Motor
