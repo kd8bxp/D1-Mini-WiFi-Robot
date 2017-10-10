@@ -17,9 +17,12 @@ This program is free software: you can redistribute it and/or modify
 
 Change Log:
 
-Oct 7 - Fixed UDP Flooding Issue
+Oct 10 - Fixed UDP Flooding Issue
         UDP Remote Working.
         Cleaned up and made some comments in code.
+        Added more stops to reconnect function (v3.0.2) made it safer.
+        fixed date in Change Log. (Oct 7 to Oct 10)
+        * Special Note: Do not hold the toggle switch on the remote it will FLOOD and isn't needed.
         
 ToDo: Last Updated Oct 4, 2017
 

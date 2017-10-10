@@ -1,4 +1,4 @@
-//v3.0.1 
+//v3.0.2 
 
 #include "WEMOS_Motor.h"
 #include <ESP8266WiFi.h>
