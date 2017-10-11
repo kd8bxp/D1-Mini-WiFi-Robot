@@ -11,8 +11,7 @@ void updateMotor() {
 
 if (motorCurrentTimer - motorTimer >= motorStopTime) {
   stop(); //The stop() function should be resetting the variables below to zero as well (redunant code?)
-  m1count = 0;
-  m2count = 0;
+  
   m1dir = 0;
   m2dir = 0;
   motorTimer = motorCurrentTimer;

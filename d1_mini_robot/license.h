@@ -23,8 +23,12 @@ Oct 10 - Fixed UDP Flooding Issue
         Added more stops to reconnect function (v3.0.2) made it safer.
         fixed date in Change Log. (Oct 7 to Oct 10)
         * Special Note: Do not hold the toggle switch on the remote it will FLOOD and isn't needed.
-Oct 11 - Added WifiManager
-        
+Oct 10 - Added WifiManager
+Oct 10 - v3.0.3 Removed WiFiManager (caused crashes)
+         removed some variables not used
+         attempted to add protection code (caused WDT, and crashes)
+         removed Ultrasonic.h (which was just a simple setup and pin call)
+         * Changed D1 Mini microcontroller to another(different) D1 Mini thinking my crashes were a hardware issue (still crashed)
 ToDo: Last Updated Oct 4, 2017
 
 Add protection code from the ultrasonic (so it doesn't run into things)

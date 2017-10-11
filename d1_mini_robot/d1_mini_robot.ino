@@ -1,14 +1,14 @@
-//v3.0.2 
+//v3.0.3 
 
 #include "WEMOS_Motor.h"
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
 #include <PubSubClient.h>
-#include "Ultrasonic.h"
+
 #include <ArduinoJson.h>
-#include <DNSServer.h>
-#include <ESP8266WebServer.h>
-#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
+//#include <DNSServer.h>
+//#include <ESP8266WebServer.h>
+//#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
 
 
 Motor M1(0x30, _MOTOR_A, 1000); //Connected to A1 & A2 Right Motor
@@ -16,7 +16,6 @@ Motor M2(0x30, _MOTOR_B, 1000); //Connected to B1 & B2 Left Motor
 WiFiClient espClient;
 PubSubClient client(espClient);
 WiFiUDP Udp;
-Ultrasonic ultrasonic(D0); //Using D0 on the D1 Mini Board
 
 int lowSpeed = 60;
 int maxSpeed = 100;
@@ -32,9 +31,6 @@ const int M2B = 0;
 volatile int m1dir = 0;
 volatile int m2dir = 0;
 long m1steps, m2steps;
-
-//setup counters (Did I use m1count and m2count anywhere, or are the counters using m1steps, m2steps (?)
-volatile unsigned long m1count, m2count;
 
 int isRunning  = 0; //Motor Running flag.
 
@@ -63,14 +59,11 @@ const char* password = "";
 //const char* mqtt_server = "broker.mqtt-dashboard.com";
 const char* mqtt_server = "test.mosquitto.org";
 
-long lastMsg = 0;
-char msg[50];
-int value = 0;
- 
-    uint32_t chipid=ESP.getChipId(); //attempt to make a unique ID for MQTT Broker 
-    char clientid[16]; //unique ID for MQTT Broker - also used as the Publish Topic
+uint32_t chipid=ESP.getChipId(); //attempt to make a unique ID for MQTT Broker 
+char clientid[16]; //unique ID for MQTT Broker - also used as the Publish Topic
 
-long RangeInInches;
+volatile long RangeInInches;
+int ultrasonicPin = 16;
 
 int mode = 0; //Default mode is UDP remote control
 int cmd = 0; //stop command
