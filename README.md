@@ -5,6 +5,12 @@ just a remote controlled "car".
 The remote uses MQTT to get updates from the robot, the robot sends motor direction, motor encoder counts, and ultrasonic distance.  
 The remote sends UDP packets to the robot for controlling it.  
 
+# Alternative Code Branch Information
+
+This branch contains some alternitve code for the robot.  
+d1_mini_robot_remote_drive_only sketch just allows the remote to drive, there is no feedback of the sensor data.  
+
+
 ## Current Parts:  
 Pololu Romi with Romi Wheels and Motor  
 Romi Wheel Encoder  

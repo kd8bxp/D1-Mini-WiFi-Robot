@@ -57,15 +57,15 @@ void standby() {
 
 void encoderReset() {
   isRunning = 0;
-  m1dir = 0;
-  m2dir = 0;
-  m1steps = 0;
-  m2steps = 0;
+//  m1dir = 0;
+//  m2dir = 0;
+//  m1steps = 0;
+//  m2steps = 0;
   cmd = 0;
 }
 
 void update() {
-  updateMotor();
+ // updateMotor();
   yield();
 }
 

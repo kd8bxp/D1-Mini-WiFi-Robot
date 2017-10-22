@@ -29,6 +29,8 @@ Oct 10 - v3.0.3 Removed WiFiManager (caused crashes)
          attempted to add protection code (caused WDT, and crashes)
          removed Ultrasonic.h (which was just a simple setup and pin call)
          * Changed D1 Mini microcontroller to another(different) D1 Mini thinking my crashes were a hardware issue (still crashed)
+Oct 22 - Created MODE 0 only code - Remote Control.
+
 ToDo: Last Updated Oct 4, 2017
 
 Add protection code from the ultrasonic (so it doesn't run into things)

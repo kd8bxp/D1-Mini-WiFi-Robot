@@ -9,15 +9,15 @@ if (!client.connected()) {
   StaticJsonBuffer<200> sendJsonBuffer;
   JsonObject& sendRoot = sendJsonBuffer.createObject();
   sendRoot["RobotID"] = clientid; //chipid;
-  sendRoot["distance"] = RangeInInches;
+  sendRoot["distance"] = 0;
   JsonArray& direction = sendRoot.createNestedArray("direction");
-  direction.add(m1dir);
-  direction.add(m2dir);
+  direction.add(0);
+  direction.add(0);
   JsonArray& encoder = sendRoot.createNestedArray("encoder");
-  encoder.add(m1steps);
-  encoder.add(m2steps);
+  encoder.add(0);
+  encoder.add(0);
 
-char tempArr[200];
+
 sendRoot.printTo(tempArr);
 client.publish(clientid, tempArr);
 yield();
@@ -31,14 +31,14 @@ void publishTopicHome() {
   sendHomeRoot["robotID"] = clientid; //publish robot name (This is the topic the robot publishes too)
 
   //Convert IP Address to char array
-  String ipaddress = WiFi.localIP().toString();
-  char ipchar[ipaddress.length()+1];
-  ipaddress.toCharArray(ipchar,ipaddress.length()+1);
+  ipaddress = WiFi.localIP().toString();
+  //char ipchar[ipaddress.length()+1]; 
+  ipaddress.toCharArray(ipchar,16);
   sendHomeRoot["IP"] = ipchar; //This is the Robot IP address used for UDP control
 
-  char tempArr1[200];
-  sendHomeRoot.printTo(tempArr1);
-  client.publish("robothome", tempArr1);
+  //char tempArr1[200];
+  sendHomeRoot.printTo(tempArr);
+  client.publish("robothome", tempArr);
 
 }
 
