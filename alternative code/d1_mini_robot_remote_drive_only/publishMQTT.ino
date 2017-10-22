@@ -9,13 +9,13 @@ if (!client.connected()) {
   StaticJsonBuffer<200> sendJsonBuffer;
   JsonObject& sendRoot = sendJsonBuffer.createObject();
   sendRoot["RobotID"] = clientid; //chipid;
-  sendRoot["distance"] = RangeInInches;
+  sendRoot["distance"] = 0;
   JsonArray& direction = sendRoot.createNestedArray("direction");
-  direction.add(m1dir);
-  direction.add(m2dir);
+  direction.add(0);
+  direction.add(0);
   JsonArray& encoder = sendRoot.createNestedArray("encoder");
-  encoder.add(m1steps);
-  encoder.add(m2steps);
+  encoder.add(0);
+  encoder.add(0);
 
 
 sendRoot.printTo(tempArr);

@@ -1,6 +1,6 @@
 
 void checkTarget() {
-  int diff = targetCount - m1steps;
+  diff = targetCount - m1steps;
   if (diff <= 75) { M2.setmotor(_CCW, setSpeed % 20); }
   //if (diff <= 30) { M2.setmotor(_CCW, setSpeed % 15); } 
   if (diff <= 2 ) { M2.setmotor(_SHORT_BRAKE); M2.setmotor(_STOP); /*while(1) {yield();}*/}

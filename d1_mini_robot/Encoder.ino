@@ -1,6 +1,6 @@
 void m1achange() {
   detachInterrupt(M1A);
-  int snap2 = digitalRead(M1B);
+  snap2 = digitalRead(M1B);
   if (snap2 == 0) {
     // encoder channels are the same, direction is positive
     m1dir = 1;
@@ -15,8 +15,8 @@ void m1achange() {
 
 void m2achange() {
   detachInterrupt(M2A);
-  int snap2 = digitalRead(M2B);
-  if (snap2 == 0) {
+  snap3 = digitalRead(M2B);
+  if (snap3 == 0) {
     // encoder channels are the same, direction is positive
     m2dir = -1;
     m2steps--;
