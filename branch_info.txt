@@ -1,0 +1,3 @@
+Alternative_Code Branch - contains some alterntive code for using the robot.
+ping Branch - contains a working sketch that adds protection to mode0 so the robot shouldn't run into things while being remote controlled.
+
