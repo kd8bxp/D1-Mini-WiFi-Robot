@@ -17,7 +17,7 @@ D1 Mini OLED
 
 ## Installation
 
-Instructable is in the works  
+https://www.instructables.com/id/Wemos-D1-Mini-WIFI-Robot-MQTT-UDP  
 
 ## Things To Do
 
