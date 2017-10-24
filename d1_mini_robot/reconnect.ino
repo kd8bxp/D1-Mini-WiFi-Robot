@@ -1,7 +1,7 @@
 void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
-    yield();
+   // yield();
     stop(); //Stop motors....we lost at least one connection to the network.
       cmd = 0;
     Serial.print("Attempting MQTT connection...");
@@ -18,7 +18,7 @@ void reconnect() {
       Serial.println(" try again in 5 seconds");
       // Wait 5 seconds before retrying
       Serial.print("Error All Motors Stop....");
-      yield();
+     // yield();
       stop(); //Stop motors....we lost at least one connection to the network.
       cmd = 0;
       delay(5000); //....robot maybe in trouble.

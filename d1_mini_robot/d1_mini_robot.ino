@@ -66,7 +66,7 @@ char clientid[16]; //unique ID for MQTT Broker - also used as the Publish Topic
 volatile long RangeInInches;
 #define ultrasonicPin 16
 
-int mode = 0; //Default mode is UDP remote control
+int mode = 1; //autonomous mode, still checks UDP for mode changes
 int cmd = 0; //stop command
 
 int snap2;

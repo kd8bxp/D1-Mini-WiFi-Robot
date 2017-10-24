@@ -20,7 +20,7 @@ if (!client.connected()) {
 
 sendRoot.printTo(tempArr);
 client.publish(clientid, tempArr);
-yield();
+//yield();
 
 }
 

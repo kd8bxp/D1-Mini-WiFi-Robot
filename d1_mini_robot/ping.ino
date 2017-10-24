@@ -12,7 +12,9 @@ pingcount ++;
   RangeInInches = duration/74/2;
 
 pingavg = pingavg + (RangeInInches);
-checkSonar(); //protection from hitting walls or objects.
+if (mode == 0 ) {
+  checkSonar(); //protection from hitting walls or objects.
+}
  
 }
 
