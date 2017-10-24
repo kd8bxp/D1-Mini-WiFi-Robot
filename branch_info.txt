@@ -1,3 +1,4 @@
 Alternative_Code Branch - contains some alterntive code for using the robot.
 ping Branch - contains a working sketch that adds protection to mode0 so the robot shouldn't run into things while being remote controlled.
+autonomous branch - contains working code for mode 1. Has remote display, and remote control can be used to change modes with some patients.
 
