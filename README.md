@@ -5,6 +5,11 @@ just a remote controlled "car".
 The remote uses MQTT to get updates from the robot, the robot sends motor direction, motor encoder counts, and ultrasonic distance.  
 The remote sends UDP packets to the robot for controlling it.  
 
+# This Branch - Autonomous
+
+Default mode is 1, avoids objects, updates remote. Mode can be changed from  
+remote with some patients.  
+
 ## Current Parts:  
 Pololu Romi with Romi Wheels and Motor  
 Romi Wheel Encoder  

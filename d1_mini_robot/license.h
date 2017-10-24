@@ -30,6 +30,7 @@ Oct 10 - v3.0.3 Removed WiFiManager (caused crashes)
          removed Ultrasonic.h (which was just a simple setup and pin call)
          * Changed D1 Mini microcontroller to another(different) D1 Mini thinking my crashes were a hardware issue (still crashed)
 Oct 22 - Added protection mode, for moving forward, appears to be working correctly.
+Oct 24 - Added a working (after much trial and error) mode1 - autonomous mode - Has remote updates, and mode can be changed from remote.
         
 ToDo: Last Updated Oct 22, 2017
 
