@@ -5,9 +5,9 @@ void setup() {
   pinMode(DOWN, INPUT_PULLUP);
   pinMode(RIGHT, INPUT_PULLUP);
   Serial.begin(9600);
-  //setup_wifi();
-  WiFiManager wifiManager;
-  wifiManager.autoConnect();
+  setup_wifi();
+  //WiFiManager wifiManager;
+  //wifiManager.autoConnect();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
   display.init();

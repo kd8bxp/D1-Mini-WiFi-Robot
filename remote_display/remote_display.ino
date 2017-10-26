@@ -4,14 +4,15 @@
 #include <PubSubClient.h>
 #include "SSD1306.h"
 #include <ArduinoJson.h>
-#include <DNSServer.h>
-#include <ESP8266WebServer.h>
-#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
+//#include <DNSServer.h>
+//#include <ESP8266WebServer.h>
+//#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
 
-const char* ssid = "Motel6";
+const char* ssid = "robotAP";
 const char* password = "";
 //const char* mqtt_server = "broker.mqtt-dashboard.com";
-const char* mqtt_server = "test.mosquitto.org";
+//const char* mqtt_server = "test.mosquitto.org";
+const char* mqtt_server = "192.168.0.1";
 
 volatile int m1dir = 0;
 volatile int m2dir = 0;

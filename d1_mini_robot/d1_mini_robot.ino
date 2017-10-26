@@ -55,10 +55,12 @@ unsigned int localPort = 8888;      // local UDP port to listen on
 char packetBuffer[UDP_TX_PACKET_MAX_SIZE]; //buffer to hold incoming packet,
 char ReplyBuffer[] = "ack";  // a string to send back (I think this is a hold over from the library example and not used here)
 
-const char* ssid = "Motel6";
+const char* ssid = "robotAP";
 const char* password = "";
 //const char* mqtt_server = "broker.mqtt-dashboard.com";
-const char* mqtt_server = "test.mosquitto.org";
+//const char* mqtt_server = "test.mosquitto.org";
+const char* mqtt_server = "192.168.0.1";
+
 
 uint32_t chipid=ESP.getChipId(); //attempt to make a unique ID for MQTT Broker 
 char clientid[16]; //unique ID for MQTT Broker - also used as the Publish Topic

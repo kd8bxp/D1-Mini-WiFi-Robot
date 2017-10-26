@@ -1,4 +1,4 @@
-Step 11 - Option Create your own network using a Raspberry PI Zero W,
+Step 11 - Option Create your own network using a Raspberry PI Zero W, (Done Oct 25, 2017)
 Step 12 - Optional Robot Code
         a) Autonomous driving (no remote or remote display) (Done Oct 24, 2017)
         b) 90 degree turning using the wheel encoders

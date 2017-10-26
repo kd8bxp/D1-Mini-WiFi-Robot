@@ -18,4 +18,6 @@ This program is free software: you can redistribute it and/or modify
 Change Log:
 
 Oct 11 - v3.0.1 Added WiFiManager 
+Oct 25 - Modified to work with RaspberryPI access point
+
 */

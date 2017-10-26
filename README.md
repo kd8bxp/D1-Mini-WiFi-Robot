@@ -5,10 +5,14 @@ just a remote controlled "car".
 The remote uses MQTT to get updates from the robot, the robot sends motor direction, motor encoder counts, and ultrasonic distance.  
 The remote sends UDP packets to the robot for controlling it.  
 
-# This Branch - Autonomous
+# This Branch - Raspberry PI as Access Point
 
-Default mode is 1, avoids objects, updates remote. Mode can be changed from  
-remote with some patients.  
+Set up a Raspberry PI zero W as a access point.  
+mosquitto broker is installed.  
+The Raspberry PI does not provide access to a outside network (IE: Internet)   
+it is strickly an intranet.  
+
+Limitation - Could not get hostapd to filter MAC addresses. * Need away to do this  
 
 ## Current Parts:  
 Pololu Romi with Romi Wheels and Motor  

@@ -31,6 +31,7 @@ Oct 10 - v3.0.3 Removed WiFiManager (caused crashes)
          * Changed D1 Mini microcontroller to another(different) D1 Mini thinking my crashes were a hardware issue (still crashed)
 Oct 22 - Added protection mode, for moving forward, appears to be working correctly.
 Oct 24 - Added a working (after much trial and error) mode1 - autonomous mode - Has remote updates, and mode can be changed from remote.
+Oct 25 - Modified to work with RaspberryPI access point
         
 ToDo: Last Updated Oct 22, 2017
 

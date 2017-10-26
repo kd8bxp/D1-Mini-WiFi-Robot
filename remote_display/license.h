@@ -18,5 +18,6 @@ This program is free software: you can redistribute it and/or modify
 Change Log:
 
 Oct 11 - Modified version of remote_control, this is a display only.
+Oct 25 - Modified to work with RaspberryPI access point
 
 */
