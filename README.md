@@ -12,7 +12,10 @@ mosquitto broker is installed.
 The Raspberry PI does not provide access to a outside network (IE: Internet)   
 it is strickly an intranet.  
 
-Limitation - Could not get hostapd to filter MAC addresses. * Need away to do this  
+raspberry_pi folder contains my setup files, dnsmasq.conf needs to be edited for the MAC addresses of your D1 Minis, and computer.  
+
+use findesp32macaddress or findesp8266mac address to find your devices MACs  
+displayed in the serial console.  
 
 ## Current Parts:  
 Pololu Romi with Romi Wheels and Motor  
