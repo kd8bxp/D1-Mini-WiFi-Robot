@@ -30,12 +30,12 @@ volatile unsigned int ping1 = (pingavg/pingcount);
 
 if (ping1 <= STOPDISTANCE && cmd == 1) {
   stop();
-  startTimer(2000);
+  /*startTimer(2000);
   backward(maxSpeed);
   while(isRunning) {
     updateMotor();
     publishMQTT();
-  }
+  }*/
   startTimer(500);
   left(lowSpeed);
   while(isRunning) {
