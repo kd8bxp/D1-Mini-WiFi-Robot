@@ -1,11 +1,11 @@
 //v3.0.3 
 
-#include "WEMOS_Motor.h"
+#include "src/WEMOS_Motor/WEMOS_Motor.h"
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
-#include <PubSubClient.h>
+#include "src/PubSubClient/PubSubClient.h"
 
-#include <ArduinoJson.h>
+#include "src/ArduinoJson/ArduinoJson.h"
 //#include <DNSServer.h>
 //#include <ESP8266WebServer.h>
 //#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager

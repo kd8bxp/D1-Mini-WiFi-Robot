@@ -2,14 +2,14 @@
 
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
-#include <PubSubClient.h>
-#include "SSD1306.h"
-#include <ArduinoJson.h>
+#include "src/PubSubClient/PubSubClient.h"
+#include "src/esp8266_ssd1306/SSD1306.h"
+#include "src/ArduinoJson/ArduinoJson.h"
 #include <DNSServer.h>
 #include <ESP8266WebServer.h>
-#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
+#include "src/WiFiManager/WiFiManager.h"         //https://github.com/tzapu/WiFiManager
 
-const char* ssid = "Motel6";
+const char* ssid = "";
 const char* password = "";
 //const char* mqtt_server = "broker.mqtt-dashboard.com";
 const char* mqtt_server = "test.mosquitto.org";
